@@ -4,6 +4,7 @@
 
 body {
   font-size: 16px;
+  font-family: 'Open Sans', "source-han-sans-simplified-c", sans-serif;
   margin: 0;
   color: #787878;
 }
@@ -21,7 +22,8 @@ a {
 }
 
 a:hover {
-  color: #2e8ebd;
+  cursor: pointer;
+  color: #67c3f1;
   border-color: transparent;
 }
 
@@ -31,6 +33,7 @@ a:hover {
   padding: 100px 0 0 0;
   position: fixed;
   left: 0;
+  color: #d7d7d7;
   text-align: center;
   background: url('/images/background.jpg') no-repeat center center;
   background-size: auto, auto 100%;
@@ -45,10 +48,16 @@ a:hover {
 
 .content {
   margin-left: 30%;
+  padding: 8em 4em 4em 4em;
 }
 
 h2, h3, h4, h5, h6, p{
   font-weight: 400;
+}
+
+.content ul {
+  line-height: 1.8;
+  margin-left: 15%;
 }
 
 .contact {
@@ -57,6 +66,11 @@ h2, h3, h4, h5, h6, p{
 
 #social {
   margin-top: 80px;
+}
+
+.section {
+  padding: 10px;
+  border-bottom: 5px solid #d7d7d7;
 }
 
 .item-link {
@@ -68,4 +82,66 @@ h2, h3, h4, h5, h6, p{
 .item-link i {
   font-size: 2.5em;
   border-color: transparent;
+}
+
+.eng-title {
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.first {
+  float: left;
+  width: 15%;
+}
+
+.second {
+  float: left;
+  width: 40%;
+}
+
+.third {
+  float: left;
+  width: 45%;
+}
+
+.full {
+  margin-top: 4px;
+  background-color: #d7d7d7;
+  border-radius: 3px;
+  height: 15px;
+  vertical-align: baseline;
+  margin-bottom: 10px;
+}
+
+.current {
+  background-color: #67c3f1;
+  border-radius: 3px;
+  height: 100%;
+}
+
+.row {
+  display: block;
+  width: 100%;
+}
+
+.row:before {
+  display: table;
+  content: " ";
+  box-sizing: border-box;
+}
+
+.row:after {
+  display: table;
+  content: " ";
+  clear: both;
+  box-sizing: border-box;
+}
+
+#footer {
+  position: fixed;
+  width: 30%;
+  bottom: 20px;
+  margin: 30px;
+  left: 0;
 }
