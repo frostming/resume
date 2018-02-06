@@ -48,7 +48,7 @@ a:hover {
 
 .content {
   margin-left: 30%;
-  padding: 8em 4em 4em 4em;
+  padding: 4em;
 }
 
 h2, h3, h4, h5, h6, p{
@@ -144,4 +144,20 @@ h2, h3, h4, h5, h6, p{
   bottom: 20px;
   margin: 30px;
   left: 0;
+}
+
+a.download-btn {
+  background-color: rgba(103, 195, 241, .5);
+  padding: 10px;
+  color: white;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 3px;
+}
+
+a.download-btn:hover {
+  background-color: rgba(103, 195, 241, 1);
 }
