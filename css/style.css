@@ -29,10 +29,7 @@ a:hover {
 
 #sidebar {
   height: 100%;
-  width: 30%;
   padding: 100px 0 0 0;
-  position: fixed;
-  left: 0;
   color: #d7d7d7;
   text-align: center;
   background: url('/images/background.jpg') no-repeat center center;
@@ -41,13 +38,24 @@ a:hover {
   background-position: left -150px;
 }
 
+@media (min-width: 1000px) {
+  #sidebar {
+    position: fixed;
+    width: 30%;
+    left: 0;
+  }
+
+  .content {
+    margin-left: 30%;
+  }
+}
+
 #avatar {
   width: 30%;
   border-radius: 50%;
 }
 
 .content {
-  margin-left: 30%;
   padding: 4em;
 }
 
@@ -164,6 +172,8 @@ a.download-btn:hover {
 
 .skill {
   margin-right: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
   padding: 5px 10px;
   border-radius: 2px;
   color: white;
