@@ -55,6 +55,15 @@ a:hover {
   border-radius: 50%;
 }
 
+@media print {
+  #avatar {
+    display: none;
+  }
+  #footer {
+    display: none;
+  }
+}
+
 .content {
   padding: 4em;
 }
