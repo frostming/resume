@@ -1,0 +1,141 @@
+t:  # translations
+  work_experience: 工作经历
+  skills: 技能
+  open_source: 开源项目
+  stack: 技术栈
+  honors: 其他荣誉
+  education: 教育经历
+
+title: 个人简历
+name: 明希 (Frost Ming)
+description: 8 年 Python 程序员 / Web 开发者 / 开源作者
+
+location: 广东深圳，中国
+phone: (+86)18922804264
+email: me@frostming.com
+
+links:
+  - icon: fa-solid fa-globe
+    url: https://frostming.com
+  - icon: fa-brands fa-github
+    url: https://github.com/frostming
+  - icon: fa-brands fa-linkedin
+    url: https://www.linkedin.com/in/frostming/
+
+skills:
+  - name: Python
+    value: 90
+  - name: JS/TS
+    value: 65
+  - name: Golang
+    value: 60
+  - name: Linux
+    value: 65
+  - name: CI/CD
+    value: 70
+  - name: Web Development
+    value: 75
+
+work_experience:
+  - company: Crypto.com
+    position: 量化开发工程师
+    start: '2020'
+    end: '2023'
+    content: |
+      开发了多个供量化交易员使用的内部系统及对应的基础组件：
+
+      * 交易数据中台：实现交易员的各种内部运维需求及内部数据看板
+      * 统一用户权限中心：在交易团队内部使用的集用户认证、权限校验、权限管理的权限中心
+      * Apollo Config Python SDK：在 Apollo Config HTTP API 基础上封装的 Python SDK，同时支持同步和异步，以及配置值加解密功能
+
+  - company: 太极图形
+    position: CI/CD 工程师(兼职)
+    start: '2021'
+    end: '2022'
+    content: |
+      期间为 taichi 项目的持续集成做了多项改进：（列举部分）
+
+      * PR#3852: Add self-hosted Windows buildbot for GPU testing
+      * PR#4624: Switch to scikit-build as the build backend
+      * PR#4546: Parametrize the test cases with pytest.mark
+      * PR#4633: Use pre-commit to run linters and formatters
+      * PR#4428: Automate release publishing
+
+  - company: 腾讯
+    position: 测试开发
+    start: '2018'
+    end: '2020'
+    content: |
+      **负责财付通内部的持续集成系统开发**
+
+      * 把执行引擎从 Jenkins 迁移到自研的任务处理器
+      * 升级改进了工作流的自定义任务，支持从 YAML 读入配置
+      * 服务模块 3000 多个
+      * 日均构建数 100 次
+
+      **负责测试数据管理系统的开发**
+
+      * 用 Django & SQLAlchemy 开发实现了多环境测试数据同步系统
+
+  - company: ASML Brion
+    position: 测试
+    start: '2014'
+    end: '2018'
+    content: |
+      **负责对计算光刻的 Tachyon 系列软件的 GUI 测试**
+
+      **开发与维护自动化测试框架**
+
+      * 基于 Qt(PyQt) + RPC
+      * 实现图片的自动比较，计算差异
+
+      **设计开发了自动化测试管理平台**
+
+      * 基于 Flask
+      * 管理多个节点的测试用例执行与结果收集
+      * 利用 Robotframework 生成测试报告并发送通知
+
+stack:
+  - PDM
+  - Flask
+  - Django
+  - FastAPI
+  - Pandas
+  - Vue.js
+  - React
+  - Next
+
+open_source:
+  - name: PDM
+    repository: https://github.com/pdm-project/pdm
+    description: 功能强大、可扩展、遵循最新标准的 Python 包管理器
+  - name: Marko
+    repository: https://github.com/frostming/marko
+    description: 可扩展的 Markdown 解析器和渲染器
+  - name: unearth
+    repository: https://github.com/frostming/unearth
+    description: PyPI 包的下载工具，支持给定依赖
+  - name: tomlkit
+    repository: https://github.com/sdispater/tomlkit
+    description: Python 实现的保持格式和注释的 TOML 解析器和序列化器
+
+
+honors:
+  - PyPA 成员
+  - Microsoft MVP
+  - PyCon China 讲师
+  - PyCon China 2021-2022 组织
+
+education:
+  - school: 中国科学院大学
+    start: 2011
+    end: 2014
+    degree: 工程硕士
+    major: 集成电路工艺
+    content: 半导体器件工艺的研究
+  - school: 中国科学技术大学
+    start: 2007
+    end: 2011
+    degree: 工学学士
+    major: 电子科学技术
+    content: 'GPA: 3.8/4.0'

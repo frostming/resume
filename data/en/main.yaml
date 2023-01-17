@@ -1,0 +1,141 @@
+t:  # translations
+  work_experience: work experience
+  skills: Skills
+  open_source: os projects
+  stack: stack
+  honors: honors
+  education: education
+
+title: Resume
+name: Frost Ming
+description: Python Programmer with 8 year experience / Web Developer / OSS maintainer
+
+location: Shenzhen, China
+phone: (+86)18922804264
+email: me@frostming.com
+
+links:
+  - icon: fa-solid fa-globe
+    url: https://frostming.com
+  - icon: fa-brands fa-github
+    url: https://github.com/frostming
+  - icon: fa-brands fa-linkedin
+    url: https://www.linkedin.com/in/frostming/
+
+skills:
+  - name: Python
+    value: 90
+  - name: JS/TS
+    value: 65
+  - name: Golang
+    value: 60
+  - name: Linux
+    value: 65
+  - name: CI/CD
+    value: 70
+  - name: Web Development
+    value: 75
+
+work_experience:
+  - company: Crypto.com
+    position: Quant Developer
+    start: '2020'
+    end: '2023'
+    content: |
+      Several internal systems and corresponding basic components for quantitative traders have been developed.
+
+      * Trading data middle office: traders are able to do various operations and data manipulation and internal data visualization
+      * Unified user permission center: a permission center that integrates user authentication, permission verification, and permission management for use within the trading team
+      * Apollo Config Python SDK: A Python SDK built on top of Apollo Config HTTP API, supporting both synchronous and asynchronous call, as well as configuration value encryption and decryption
+
+  - company: Taichi Graphics
+    position: CI/CD Engineer(Part time)
+    start: '2021'
+    end: '2022'
+    content: |
+      A notable amount of improvements were made to the taichi project's continuous integration during this period: (to name a few)
+
+      * PR#3852: Add self-hosted Windows buildbot for GPU testing
+      * PR#4624: Switch to scikit-build as the build backend
+      * PR#4546: Parametrize the test cases with pytest.mark
+      * PR#4633: Use pre-commit to run linters and formatters
+      * PR#4428: Automate release publishing
+
+  - company: Tencent
+    position: R&D Effectiveness
+    start: '2018'
+    end: '2020'
+    content: |
+      **Responsible for the continuous integration system development within FiT(an internal group focusing on online payment)**
+
+      * Migrating the execution engine from Jenkins to a homegrown task processor
+      * Improve the user experience of custom tasks for workflows and supports reading in configurations from YAML
+      * Serve for more than 3000 service modules
+      * Average number of 100 builds per day
+
+      **Responsible for the development of test data management system**
+
+      * Developed and implemented a multi-environment test data synchronization system using Django & SQLAlchemy
+
+  - company: ASML Brion
+    position: Quality Assurance
+    start: '2014'
+    end: '2018'
+    content: |
+      **Responsible for GUI testing of the Tachyon software family for computational lithography**
+
+      **Develop and maintain the automated testing frameworks**
+
+      * Based on Qt(PyQt) + RPC
+      * Implement automatic comparison of images and calculate differences
+
+      **Designed and developed an automated test management platform**
+
+      * Based on Flask
+      * Manage test case execution and result collection across multiple nodes
+      * Generate test reports with Robotframework and send notifications
+
+stack:
+  - PDM
+  - Flask
+  - Django
+  - FastAPI
+  - Pandas
+  - Vue.js
+  - React
+  - Next
+
+open_source:
+  - name: PDM
+    repository: https://github.com/pdm-project/pdm
+    description: A modern Python package and dependency manager supporting the latest PEP standards
+  - name: Marko
+    repository: https://github.com/frostming/marko
+    description: A markdown parser with high extensibility
+  - name: unearth
+    repository: https://github.com/frostming/unearth
+    description: A utility to fetch and download python packages
+  - name: tomlkit
+    repository: https://github.com/sdispater/tomlkit
+    description: Style-preserving TOML library for Python
+
+
+honors:
+  - PyPA member
+  - Microsoft MVP
+  - PyCon China speaker
+  - PyCon China 2021-2022 organizer
+
+education:
+  - school: University of Chinese Academy of China
+    start: 2011
+    end: 2014
+    degree: MS. D
+    major: Integrated Circuit Technology
+    content: Research on semiconductor device processes
+  - school: University of Science and Technology of China
+    start: 2007
+    end: 2011
+    degree: BS. D
+    major: Electronic Engineering
+    content: 'GPA: 3.8/4.0'

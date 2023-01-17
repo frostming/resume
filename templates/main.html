@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ title }} | {{ name }}</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="{{ title }} | {{ name }}">
+<script src="https://kit.fontawesome.com/4810f03ea3.js" crossorigin="anonymous"></script>
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <div class="lg:container mx-auto py-6 flex">
+    <div class="px-8 w-3/4">
+      <section id="bio" class="mb-8 flex">
+        <div class="grow">
+          <h2 class="text-5xl text-indigo-700 font-black mb-4">{{ name }}</h2>
+          <p class="text-xl">{{ description }}</p>
+        </div>
+        <div class="text-xl">
+          {% for locale in other_locales %}
+          <a href="/{{ locale }}" class="uppercase p-2 hover:rounded hover:bg-indigo-200 duration-300">{{ locale }}</a>
+          {% endfor %}
+          <a href="{{ title }}_{{ name }}.pdf" target="_blank" class="p-2 hover:rounded hover:bg-indigo-200 duration-300"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+        </div>
+      </section>
+      <section id="work">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.work_experience }}</h2>
+        {% for job in work_experience %}
+        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
+          <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
+          <h3 class="mb-2">{{ job.start }} - {{ job.end }}</h3>
+          <div>{{ job.content|markdown }}</div>
+        </div>
+        {% endfor %}
+      </section>
+      <section id="education">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.education }}</h2>
+        {% for item in education %}
+        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
+          <h2 class="text-xl font-bold">{{ item.school }}</h2>
+          <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
+          <p>{{ item.major }} / {{ item.degree }}</p>
+          <div>{{ item.content }}</div>
+        </div>
+        {% endfor %}
+      </section>
+    </div>
+    <div class="pr-8 w-1/4">
+      <section id="contact" class="mb-6">
+        <div class="font-light text-xl mb-4">
+          <p><i class="fa-solid fa-location-dot"></i> {{ location }}</p>
+          <p><i class="fa-solid fa-phone"></i> {{ phone }}</p>
+          <a class="hover:text-indigo-700 hover:underline" href="mailto:{{email}}" target="_blank"><i class="fa-solid fa-envelope"></i> {{ email }}</p>
+        </div>
+        <ul>
+          {% for link in links %}
+          <li>
+            <a class="hover:text-indigo-700 hover:underline" href="{{ link.url }}" target="_blank"><i class="{{ link.icon }}"></i> {{ link.url }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section id="stack" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.stack }}</h2>
+        {% for item in stack %}
+        <span class="rounded py-1 px-2 my-1 bg-indigo-700 text-white inline-block">{{ item }}</span>
+        {% endfor %}
+      </section>
+      <section id="skills" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.skills }}</h2>
+        {% for skill in skills %}
+        <div class="mb-2">
+          <p>{{ skill.name }}</p>
+          <progress max="100" aria-labelledby="progress-id" value="{{ skill.value }}" class="w-full h-1.5 block"></progress>
+        </div>
+        {% endfor %}
+      </section>
+      <section id="open-source" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.open_source }}</h2>
+        {% for project in open_source %}
+        <div class="mb-2">
+          <div class="flex justify-between">
+            <p class="font-bold text-indigo-700">{{ project.name }}</p>
+            <div><i class="fa-solid fa-star"></i> {{ github_stars(project.repository) }}</div>
+          </div>
+          <p><a class="hover:text-indigo-700 hover:underline" href="{{ project.repository }}" target="_blank"><i class="fa-brands fa-github"></i> {{ project.repository }}</a></p>
+          <p>{{ project.description }}</p>
+        </div>
+        {% endfor %}
+      </section>
+      <section id="honors" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.honors }}</h2>
+        <ul class="list-disc px-4">
+          {% for item in honors %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      <footer class="font-light text-gray-300">
+        <p>Made by Frost Ming with Jinja2 & TailwindCSS</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
