@@ -20,7 +20,16 @@ jobs:
       - name: Run build
         run: |
           pdm run build
-          echo > output/.nojekyll
+
+      - uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./output/en/index.html
+          outputFile: ./output/en/Resume_en.pdf
+
+      - uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./output/zh/index.html
+          outputFile: ./output/zh/Resume_zh.pdf
 
       - uses: actions/upload-pages-artifact@v1.0.7
         with:
