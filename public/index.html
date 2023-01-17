@@ -7,10 +7,12 @@
     <meta http-equiv="refresh" content="1; url=en/" />
   </noscript>
   <script>
-    window.location.replace("en/" + window.location.hash);
+    const locales = ['en', 'zh']
+    const locale = locales.filter(l => navigator.language.startsWith(l))[0] || 'en'
+    window.location.replace(`${locale}/${window.location.hash}`);
   </script>
 </head>
 <body>
-  Redirecting to <a href="en/">en/</a>...
+  Redirecting...
 </body>
 </html>
