@@ -11,12 +11,13 @@ name: Frost Ming
 description: Python Programmer with 8 year experience / Web Developer / OSS maintainer
 
 location: Shenzhen, China
-phone: (+86)18922804264
 email: me@frostming.com
 
 links:
   - icon: fa-solid fa-globe
     url: https://frostming.com
+  - icon: fa-brands fa-weixin
+    url: frostanne
   - icon: fa-brands fa-github
     url: https://github.com/frostming
   - icon: fa-brands fa-linkedin

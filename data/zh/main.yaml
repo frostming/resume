@@ -11,12 +11,13 @@ name: 明希 (Frost Ming)
 description: 8 年 Python 程序员 / Web 开发者 / 开源作者
 
 location: 广东深圳，中国
-phone: (+86)18922804264
 email: me@frostming.com
 
 links:
   - icon: fa-solid fa-globe
     url: https://frostming.com
+  - icon: fa-brands fa-weixin
+    url: frostanne
   - icon: fa-brands fa-github
     url: https://github.com/frostming
   - icon: fa-brands fa-linkedin
