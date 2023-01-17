@@ -8,7 +8,8 @@ t:  # translations
 
 title: 个人简历
 name: 明希 (Frost Ming)
-description: 8 年 Python 程序员 / Web 开发者 / 开源作者
+bio: 微软 MVP / PyPA 成员 / PDM 作者
+description: 8 年 Python 开发经验，全栈开发者；擅长 Web 开发、CI/CD 自动化领域；爱好开源，维护多个开源项目；PyCon China 讲师。
 
 location: 广东深圳，中国
 email: me@frostming.com
@@ -119,13 +120,6 @@ open_source:
   - name: tomlkit
     repository: https://github.com/sdispater/tomlkit
     description: Python 实现的保持格式和注释的 TOML 解析器和序列化器
-
-
-honors:
-  - PyPA 成员
-  - Microsoft MVP
-  - PyCon China 讲师
-  - PyCon China 2021-2022 组织
 
 education:
   - school: 中国科学院大学

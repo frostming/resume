@@ -8,7 +8,12 @@ t:  # translations
 
 title: Resume
 name: Frost Ming
-description: Python Programmer with 8 year experience / Web Developer / OSS maintainer
+bio: Microsoft MVP / PyPA member / Author of PDM
+description: >
+  8 years of Python development experience, full-stack developer;
+  specializing in Web development and CI/CD automation;
+  open source lover, maintaining several open source projects;
+  PyCon China speaker
 
 location: Shenzhen, China
 email: me@frostming.com
@@ -119,13 +124,6 @@ open_source:
   - name: tomlkit
     repository: https://github.com/sdispater/tomlkit
     description: Style-preserving TOML library for Python
-
-
-honors:
-  - PyPA member
-  - Microsoft MVP
-  - PyCon China speaker
-  - PyCon China 2021-2022 organizer
 
 education:
   - school: University of Chinese Academy of Science

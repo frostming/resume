@@ -16,7 +16,8 @@
       <section id="bio" class="mb-8 flex">
         <div class="grow">
           <h2 class="text-5xl text-indigo-700 font-black mb-4">{{ name }}</h2>
-          <p class="text-xl">{{ description }}</p>
+          <p class="text-xl">{{ bio }}</p>
+          <p class="font-light">{{ description }}</p>
         </div>
         <div class="text-xl">
           {% for locale in other_locales %}
@@ -87,14 +88,6 @@
           <p>{{ project.description }}</p>
         </div>
         {% endfor %}
-      </section>
-      <section id="honors" class="mb-6">
-        <h2 class="uppercase font-bold tracking-widest text-indigo-700 text-xl mb-4">{{ t.honors }}</h2>
-        <ul class="list-disc px-4">
-          {% for item in honors %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
       </section>
       <footer class="font-light text-gray-300">
         <p>Made by Frost Ming with Jinja2 & TailwindCSS</p>
