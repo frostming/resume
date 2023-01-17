@@ -11,8 +11,8 @@
 <link href="/css/custom.css" rel="stylesheet">
 </head>
 <body>
-  <div class="lg:container mx-auto py-6 flex">
-    <div class="px-8 w-3/4">
+  <div class="lg:container mx-auto p-6 gap-6 md:flex">
+    <div class="basis-3/4">
       <section id="bio" class="mb-8 flex">
         <div class="grow">
           <h2 class="text-5xl text-indigo-700 font-black mb-4">{{ name }}</h2>
@@ -46,7 +46,7 @@
         {% endfor %}
       </section>
     </div>
-    <div class="pr-8 w-1/4">
+    <div class="basis-1/4">
       <section id="contact" class="mb-6">
         <div class="font-light text-xl mb-4">
           <p><i class="fa-solid fa-location-dot"></i> {{ location }}</p>
