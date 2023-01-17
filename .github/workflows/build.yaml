@@ -21,18 +21,6 @@ jobs:
         run: |
           pdm run build
 
-      - uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: ./output/en/index.html
-          outputFile: ./output/en/Resume_en.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
-
-      - uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: ./output/zh/index.html
-          outputFile: ./output/zh/Resume_zh.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
-
       - uses: actions/upload-pages-artifact@v1.0.7
         with:
           path: output/
