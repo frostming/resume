@@ -56,7 +56,7 @@ class ResumeRenderer:
             self._render_locale(locale, template_name)
 
     def copy_assets(self) -> None:
-        assets_dir = self.root / "assets"
+        assets_dir = self.root / "public"
         for dirpath, _, filenames in os.walk(assets_dir):
             for filename in filenames:
                 file = Path(dirpath, filename)
