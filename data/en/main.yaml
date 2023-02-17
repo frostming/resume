@@ -45,8 +45,8 @@ skills:
 work_experience:
   - company: Crypto.com
     position: Quant Developer
-    start: '2020'
-    end: '2023'
+    start: '2020.9'
+    end: '2023.2'
     content: |
       Several internal systems and corresponding basic components for quantitative traders have been developed.
 
@@ -56,8 +56,8 @@ work_experience:
 
   - company: Taichi Graphics
     position: CI/CD Engineer(Part time)
-    start: '2021'
-    end: '2022'
+    start: '2021.11'
+    end: '2022.6'
     content: |
       A notable amount of improvements were made to the taichi project's continuous integration during this period: (to name a few)
 
@@ -69,8 +69,8 @@ work_experience:
 
   - company: Tencent
     position: R&D Effectiveness
-    start: '2018'
-    end: '2020'
+    start: '2018.7'
+    end: '2020.9'
     content: |
       **Responsible for the continuous integration system development within FiT(an internal group focusing on online payment)**
 
@@ -85,8 +85,8 @@ work_experience:
 
   - company: ASML Brion
     position: Quality Assurance
-    start: '2014'
-    end: '2018'
+    start: '2014.7'
+    end: '2018.7'
     content: |
       **Responsible for GUI testing of the Tachyon software family for computational lithography**
 

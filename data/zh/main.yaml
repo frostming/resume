@@ -41,8 +41,8 @@ skills:
 work_experience:
   - company: Crypto.com
     position: 量化开发工程师
-    start: '2020'
-    end: '2023'
+    start: '2020.9'
+    end: '2023.2'
     content: |
       开发了多个供量化交易员使用的内部系统及对应的基础组件：
 
@@ -52,8 +52,8 @@ work_experience:
 
   - company: 太极图形
     position: CI/CD 工程师(兼职)
-    start: '2021'
-    end: '2022'
+    start: '2021.11'
+    end: '2022.6'
     content: |
       期间为 taichi 项目的持续集成做了多项改进：（列举部分）
 
@@ -65,8 +65,8 @@ work_experience:
 
   - company: 腾讯
     position: 测试开发
-    start: '2018'
-    end: '2020'
+    start: '2018.7'
+    end: '2020.9'
     content: |
       **负责财付通内部的持续集成系统开发**
 
@@ -81,8 +81,8 @@ work_experience:
 
   - company: ASML Brion
     position: 测试
-    start: '2014'
-    end: '2018'
+    start: '2014.7'
+    end: '2018.7'
     content: |
       **负责对计算光刻的 Tachyon 系列软件的 GUI 测试**
 
