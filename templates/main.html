@@ -52,7 +52,7 @@
         <div class="font-light text-xl mb-4">
           <p><i class="fa-solid fa-location-dot"></i> {{ location }}</p>
           <p><a class="hover:text-indigo-700 hover:underline" href="mailto:{{email}}" target="_blank"><i class="fa-solid fa-envelope"></i> {{ email }}</a></p>
-          {% if phone %}<p><a class="hover:text-indigo-700 hover:underline" href="mailto:{{email}}" target="_blank"><i class="fa-solid fa-phone"></i> {{ phone }}</a></p>{% endif %}
+          {% if phone %}<p><i class="fa-solid fa-phone"></i> {{ phone }}</p>{% endif %}
         </div>
         <ul>
           {% for link in links %}
