@@ -6,13 +6,10 @@ from pathlib import Path
 from typing import Any
 
 
-def build(filename: Any = None, minify: bool = False) -> None:
+def build(__filename: Any = None, *, minify: bool = False, path: str = "") -> None:
     from renderer._core import ResumeRenderer
 
-    if isinstance(filename, bool):
-        minify = filename
-
-    renderer = ResumeRenderer(minify=minify)
+    renderer = ResumeRenderer(minify=minify, path=path)
     renderer.render()
     if minify:
         print("called", minify)

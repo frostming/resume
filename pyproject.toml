@@ -15,8 +15,8 @@ requires-python = ">=3.10"
 license = {text = "MIT"}
 
 [tool.pdm.scripts]
-build = {call = "renderer:build(True)"}
-dev = {call = "renderer:livereload"}
+build = "python -m renderer"
+dev = "python -m renderer --dev"
 
 [tool.pdm.dev-dependencies]
 dev = [

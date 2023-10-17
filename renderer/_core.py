@@ -40,7 +40,7 @@ class ResumeRenderer:
 
     def get_url(self, path: str) -> str:
         if path.startswith("/"):
-            return self.path + path
+            return f"{self.path}{path}"
         return path
 
     def render_markdown(self, text: str) -> str:
