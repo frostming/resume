@@ -60,6 +60,8 @@ class ResumeRenderer:
         self.copy_assets()
 
         for locale in self.data.iterdir():
+            if not (locale / "main.yaml").exists():
+                continue
             self._render_locale(locale, template_name)
 
     def copy_assets(self) -> None:
@@ -83,7 +85,11 @@ class ResumeRenderer:
         template = self.jinja_env.get_template(template_name)
         output_html = self.output_dir / locale.name / "index.html"
         output_html.parent.mkdir(exist_ok=True, parents=True)
-        locales = sorted(p.name for p in self.data.iterdir() if p.name != locale.name)
+        locales = sorted(
+            p.name
+            for p in self.data.iterdir()
+            if p.name != locale.name and p.joinpath("main.yaml").exists()
+        )
 
         with open(output_html, "w", encoding="utf-8") as f:
             f.write(template.render(data, other_locales=locales, lang=locale.name))
