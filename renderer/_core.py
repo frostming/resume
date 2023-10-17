@@ -31,11 +31,17 @@ def get_github_stars(repository: str) -> str:
 
 
 class ResumeRenderer:
-    def __init__(self, minify: bool = False) -> None:
+    def __init__(self, minify: bool = False, path: str = "") -> None:
         self.root = Path(__file__).absolute().parent.parent
         self.data = self.root / "data"
         self.output_dir = self.root / "output"
         self.minify = minify
+        self.path = path
+
+    def get_url(self, path: str) -> str:
+        if path.startswith("/"):
+            return self.path + path
+        return path
 
     def render_markdown(self, text: str) -> str:
         markdown = marko.Markdown(extensions=["gfm"])
@@ -46,6 +52,7 @@ class ResumeRenderer:
         env = Environment(loader=FileSystemLoader(self.root / "templates"))
         env.filters["markdown"] = self.render_markdown
         env.globals["github_stars"] = get_github_stars
+        env.globals["get_url"] = self.get_url
         return env
 
     def render(self, template_name: str = "main.html") -> None:
