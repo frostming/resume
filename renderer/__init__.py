@@ -12,7 +12,6 @@ def build(__filename: Any = None, *, minify: bool = False, path: str = "") -> No
     renderer = ResumeRenderer(minify=minify, path=path)
     renderer.render()
     if minify:
-        print("called", minify)
         subprocess.run(
             [
                 "tailwindcss",
