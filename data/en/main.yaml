@@ -44,6 +44,22 @@ skills:
     value: 75
 
 work_experience:
+  - company: BentoML
+    position: Senior Software Engineer
+    start: '2023.4'
+    end: 'Present'
+
+    content: |
+      **Responsible for the core development and maintenance of BentoML**
+
+      * Participate in the design and implementation of a high-performance model serving framework
+      * Design and implement user-friendly and developer-friendly APIs and SDKs
+      * Optimize the existing model deployment process to improve efficiency
+      * Also responsible for maintaining and implementing model deployments on cloud platforms
+
+      Languages used: Python, Go, TypeScript
+
+      Open source project: https://github.com/bentoml/BentoML
   - company: Crypto.com
     position: Quant Developer
     start: '2020.9'

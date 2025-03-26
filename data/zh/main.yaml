@@ -40,6 +40,23 @@ skills:
     value: 75
 
 work_experience:
+  - company: BentoML
+    position: 高级开发工程师
+    start: '2023.4'
+    end: '至今'
+
+    content: |
+      **负责 BentoML 的核心开发与维护**
+
+      * 参与设计与实现高性能的模型服务框架
+      * 设计与实现对用户友好和开发者友好的 API 和 SDK
+      * 优化现有的模型部署流程，提升效率
+      * 同时负责维护和实现模型在云端平台的部署
+
+      使用语言：Python, Go, TypeScript
+
+      开源项目：https://github.com/bentoml/BentoML
+
   - company: Crypto.com
     position: 量化开发工程师
     start: '2020.9'

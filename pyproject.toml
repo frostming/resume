@@ -1,6 +1,6 @@
 [project]
 name = "resume"
-version = "0.1.0"
+version = "0.2.0"
 description = "Resume of Frost Ming"
 authors = [
     {name = "Frost Ming", email = "me@frostming.com"},
@@ -14,16 +14,16 @@ dependencies = [
 requires-python = ">=3.10"
 license = {text = "MIT"}
 
+[tool.pdm]
+distribution = false
+
 [tool.pdm.scripts]
 build = "python -m renderer"
 dev = "python -m renderer --dev"
 
-[tool.pdm.dev-dependencies]
+[dependency-groups]
 dev = [
     "pytailwindcss>=0.1.4",
     "livereload>=2.6.3",
 ]
 
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
