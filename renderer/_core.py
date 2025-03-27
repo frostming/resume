@@ -1,3 +1,4 @@
+import hashlib
 import os
 from functools import cached_property, lru_cache
 from pathlib import Path
@@ -45,6 +46,13 @@ class ResumeRenderer:
             return f"{self.path}{path}"
         return path
 
+    def get_asset_url(self, path: str) -> str:
+        if os.getenv("MODE") == "development":
+            return self.get_url(path)
+        file_path = self.output_dir / path.lstrip("/")
+        file_hash = hashlib.md5(file_path.read_bytes()).hexdigest()
+        return f"{self.get_url(path)}?v={file_hash[:8]}"
+
     def render_markdown(self, text: str) -> str:
         markdown = marko.Markdown(extensions=["gfm"])
         return Markup(markdown.convert(text))
@@ -55,6 +63,7 @@ class ResumeRenderer:
         env.filters["markdown"] = self.render_markdown
         env.globals["github_stars"] = get_github_stars
         env.globals["get_url"] = self.get_url
+        env.globals["get_asset_url"] = self.get_asset_url
         return env
 
     def render(self, template_name: str = "main.html") -> None:
