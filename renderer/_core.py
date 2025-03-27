@@ -17,11 +17,13 @@ def format_size(size: int) -> str:
     elif size < 1024**2:
         return f"{size / 1024:.2f} KB"
     else:
-        return f"{size / 1024 ** 2:.2f} MB"
+        return f"{size / 1024**2:.2f} MB"
 
 
 @lru_cache(None)
 def get_github_stars(repository: str) -> str:
+    if os.getenv("MODE") == "development":
+        return "42"
     url = repository.replace("https://github.com", "https://api.github.com/repos")
     resp = requests.get(url)
     stars_count = resp.json()["stargazers_count"]

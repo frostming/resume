@@ -11,6 +11,7 @@ def main():
     args = parser.parse_args()
 
     if args.dev:
+        os.environ["MODE"] = "development"
         livereload()
     else:
         build(path=args.base_url, minify=True)
