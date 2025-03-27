@@ -9,8 +9,6 @@ from typing import Any
 def build(__filename: Any = None, *, minify: bool = False, path: str = "") -> None:
     from renderer._core import ResumeRenderer
 
-    renderer = ResumeRenderer(minify=minify, path=path)
-    renderer.render()
     if minify:
         subprocess.run(
             [
@@ -22,6 +20,8 @@ def build(__filename: Any = None, *, minify: bool = False, path: str = "") -> No
                 "output/css/style.css",
             ]
         )
+    renderer = ResumeRenderer(minify=minify, path=path)
+    renderer.render()
 
 
 def copy_assets(filenames: str | None = None) -> None:
